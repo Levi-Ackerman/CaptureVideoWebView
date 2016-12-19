@@ -17,6 +17,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initView();
+        mWebview.loadUrl("http://www.hao123.com");
     }
 
     private void initView() {

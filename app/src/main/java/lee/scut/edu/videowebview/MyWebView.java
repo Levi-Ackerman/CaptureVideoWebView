@@ -19,8 +19,14 @@ public class MyWebView extends WebView {
         init();
     }
 
-    private void init(){
+    private void init() {
         setWebChromeClient(new MyWebChromeClient());
         setWebViewClient(new MyWebViewClient());
+    }
+
+    @Override
+    public void loadUrl(String url) {
+        super.loadUrl(url);
+        WebViewControlller.getInstance().onUrlLoaded(this, url);
     }
 }
